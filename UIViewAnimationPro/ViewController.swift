@@ -10,11 +10,41 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var viewToAnimate: UIView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        //viewToAnimate.alpha = 0
     }
 
+    @IBAction func btnToAnimate(_ sender: Any) {
+        
+        animate2()
+    }
+    
+    func animate1() {
+        UIView.animate(withDuration: 0.5, delay: 0.0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: .curveEaseIn, animations: {
+            //self.viewToAnimate.alpha = 1
+            self.viewToAnimate.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
+        }) { (_) in
+            UIView.animate(withDuration: 0.5, animations: {
+                self.viewToAnimate.transform = CGAffineTransform.identity
+            })
+        }
+    }
+    
+    func animate2() {
+        UIView.animate(withDuration: 0.1, animations: {
+            //self.viewToAnimate.alpha = 1
+            self.viewToAnimate.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
+        }) { (_) in
+            UIView.animate(withDuration: 0.5, animations: {
+                self.viewToAnimate.transform = CGAffineTransform.identity
+            })
+        }
+    }
+    
 
 }
 
