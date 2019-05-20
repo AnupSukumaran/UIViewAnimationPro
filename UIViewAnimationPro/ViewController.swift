@@ -11,39 +11,25 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var viewToAnimate: UIView!
+    @IBOutlet weak var viewToAnimate2: UIView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //viewToAnimate.alpha = 0
+     
     }
 
     @IBAction func btnToAnimate(_ sender: Any) {
+       UIViewAnime.share.animate2(view: viewToAnimate)
+    
+    }
+    
+    
+    @IBAction func btnToAnimate2(_ sender: Any) {
+         UIViewAnime.share.bounce(view: viewToAnimate2)
         
-        animate2()
     }
     
-    func animate1() {
-        UIView.animate(withDuration: 0.5, delay: 0.0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: .curveEaseIn, animations: {
-            //self.viewToAnimate.alpha = 1
-            self.viewToAnimate.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
-        }) { (_) in
-            UIView.animate(withDuration: 0.5, animations: {
-                self.viewToAnimate.transform = CGAffineTransform.identity
-            })
-        }
-    }
-    
-    func animate2() {
-        UIView.animate(withDuration: 0.1, animations: {
-            //self.viewToAnimate.alpha = 1
-            self.viewToAnimate.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
-        }) { (_) in
-            UIView.animate(withDuration: 0.5, animations: {
-                self.viewToAnimate.transform = CGAffineTransform.identity
-            })
-        }
-    }
     
 
 }
