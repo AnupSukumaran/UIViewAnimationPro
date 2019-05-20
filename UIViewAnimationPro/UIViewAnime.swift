@@ -76,4 +76,34 @@ class UIViewAnime {
         })
     }
     
+    //MARK:
+    func zoomIn(view: UIView) {
+        
+        let originalTransform = view.transform
+        let scaledTransform = originalTransform.scaledBy(x: 0.2, y: 0.2)
+        let scaledAndTranslatedTransform = scaledTransform.translatedBy(x: 0.0, y: -250.0)
+        UIView.animate(withDuration: 0.7, animations: {
+            view.transform = scaledAndTranslatedTransform
+        })
+//        view.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
+//        UIView.animate(withDuration: 0.25, animations: {
+//            view.transform = CGAffineTransform(scaleX: 0, y: 0)
+//           // vc.view.alpha = 0.0;
+//        }, completion:{(finished : Bool)  in
+//            if (finished)
+//            {
+//               // vc.view.removeFromSuperview()
+//            }
+//        });
+        
+//        view.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
+//        UIView.animate(withDuration: 0.5, delay: 0.2, usingSpringWithDamping: 0.5, initialSpringVelocity: 0, options: .curveEaseIn, animations: {
+//            view.transform = CGAffineTransform(scaleX: 0.0, y: 0.0)
+//
+//        }, completion: { (comp) in
+//
+//        })
+    }
+    
+    
 }

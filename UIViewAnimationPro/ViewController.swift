@@ -26,8 +26,8 @@ class ViewController: UIViewController {
     
     
     @IBAction func btnToAnimate2(_ sender: Any) {
-         UIViewAnime.share.bounce(view: viewToAnimate2)
-        
+      //   UIViewAnime.share.bounce(view: viewToAnimate2)
+         UIViewAnime.share.zoomIn(view: viewToAnimate2)
     }
     
     

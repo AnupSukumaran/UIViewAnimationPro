@@ -46,7 +46,6 @@
                                 <state key="normal" title="Animate"/>
                                 <connections>
                                     <action selector="btnToAnimate2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LIO-3y-pNu"/>
-                                    <action selector="btnToAnimate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mWs-Wk-x27"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xjl-kf-Wur">
